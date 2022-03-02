@@ -132,6 +132,14 @@ class Legend {
       let mBorderColor = w.config.legend.markers.strokeColor
       let mBorderRadius = w.config.legend.markers.radius
 
+      // todo - untested code below
+      // if (Array.isArray(w.config.legend.markers.shape)) {
+      // } else {
+      //   if (w.config.legend.markers.shape !== 'circle') {
+      //     mBorderRadius = 1
+      //   }
+      // }
+
       let mStyle = elMarker.style
 
       mStyle.background = fillcolor[i]
@@ -199,9 +207,7 @@ class Legend {
 
       let elLegendText = document.createElement('span')
       elLegendText.classList.add('apexcharts-legend-text')
-      elLegendText.innerHTML = Array.isArray(text)
-        ? Utils.sanitizeDom(text.join(' '))
-        : Utils.sanitizeDom(text)
+      elLegendText.innerHTML = Array.isArray(text) ? text.join(' ') : text
 
       let textColor = w.config.legend.labels.useSeriesColors
         ? w.globals.colors[i]
@@ -257,7 +263,7 @@ class Legend {
         `apexcharts-align-${w.config.legend.horizontalAlign}`
       )
       w.globals.dom.elLegendWrap.classList.add(
-        'position-' + w.config.legend.position
+        'apx-legend-position-' + w.config.legend.position
       )
 
       elLegend.classList.add('apexcharts-legend-series')

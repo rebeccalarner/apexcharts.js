@@ -17,7 +17,7 @@
   <a href="https://twitter.com/intent/tweet?text=Create%20visualizations%20with%20this%20free%20and%20open-source%20JavaScript%20Chart%20library&url=https://www.apexcharts.com&hashtags=javascript,charts,visualizations,developers,apexcharts"><img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social"> </a>
 </p>
 
-<p align="center">A modern JavaScript charting library to build interactive charts and visualizations with simple API.</p>
+<p align="center">A modern JavaScript charting library that allows you to build interactive data visualizations with simple API and 100+ ready-to-use samples. Packed with the features that you expect, ApexCharts includes over a dozen chart types that deliver beautiful, responsive visualizations in your apps and dashboards. ApexCharts is an MIT licensed open-source project that can be used in commercial and non-commercial projects.</p>
 
 <p align="center"><a href="https://apexcharts.com/javascript-chart-demos/"><img
       src="https://apexcharts.com/media/apexcharts-banner.png"></a></p>
@@ -60,7 +60,7 @@ Useful links to wrappers other than the popular frameworks mentioned above
 - [apexcharter](https://github.com/dreamRs/apexcharter) - Htmlwidget for ApexCharts
 - [apexcharts.rb](https://github.com/styd/apexcharts.rb) - Ruby wrapper for ApexCharts
 - [larapex-charts](https://github.com/ArielMejiaDev/larapex-charts) - Laravel wrapper for ApexCharts
-- [blazor-apexcharts](https://github.com/joadan/Blazor-ApexCharts) - Blazor wrapper for ApexCharts [demo](https://joadan.github.io/Blazor-ApexCharts/)
+- [blazor-apexcharts](https://github.com/apexcharts/Blazor-ApexCharts) - Blazor wrapper for ApexCharts [demo](https://apexcharts.github.io/Blazor-ApexCharts/)
 - [svelte-apexcharts](https://github.com/galkatz373/svelte-apexcharts) - Svelte wrapper for ApexCharts
 
 
@@ -153,6 +153,16 @@ Utilize sparklines to indicate trends in data, for example, occasional increment
 
 <p align="center"><a href="https://apexcharts.com/javascript-chart-demos/sparklines/"><img src="https://apexcharts.com/media/sparklines.png" alt="sparkline-chart" /></a></p>
 
+
+## Need Advanced Data Grid for your next project? 
+We partnered with Infragistics, creators of the fastest data grids on the planet! Ignite UI Grids can handle unlimited rows and columns of data, while providing access to custom templates and real-time data updates. 
+
+<p align="center"><a href="https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/grid" target="_blank"><img src="https://apexcharts.com/media/infragistics-data-grid.png" /></a></p>
+
+Featuring an intuitive API for easy theming and branding, you can quickly bind to data with minimal hand-on coding. The grid is available in most of your favorite frameworks:  
+
+<a target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/grid">Angular Data Grid</a> | <a target="_blank" href="https://www.infragistics.com/products/ignite-ui-react/react/components/grids">React Data Grid</a> | <a target="_blank" href="https://www.infragistics.com/products/ignite-ui-blazor/blazor/components/data-grid">Blazor Data Grid</a> | <a target="_blank" href="https://www.infragistics.com/products/ignite-ui-web-components/web-components/components/data-grid">Web Components DataGrid</a> | <a target="_blank" href="https://www.igniteui.com/grid/overview">jQuery Data Grid </a>
+
 ## What's included
 
 The download bundle includes the following files and directories providing a minified single file in the dist folder. Every asset including icon/css is bundled in the js itself to avoid loading multiple files.
@@ -176,6 +186,7 @@ If you need to make it work with IE11, you need to include these polyfills befor
 
 - [promise-polyfill](https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js)
 - [classlist.js](https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill)
+- [ResizeObserver polyfill](https://cdn.jsdelivr.net/npm/@juggle/resize-observer)
 - [findIndex](https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn) - You will need this only if you require timeline/rangebar charts
 - [canvg](https://unpkg.com/canvg@3.0.4/lib/umd.js) - You will need this only if you require PNG download of your charts
 

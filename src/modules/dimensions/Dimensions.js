@@ -41,6 +41,15 @@ export default class Dimensions {
 
     this.lgRect = this.dimHelpers.getLegendsRect()
 
+    if (
+      this.isSparkline &&
+      (w.config.markers.discrete.length > 0 || w.config.markers.size > 0)
+    ) {
+      Object.entries(this.gridPad).forEach(([k, v]) => {
+        this.gridPad[k] = Math.max(v, this.w.globals.markers.largestSize / 1.5)
+      })
+    }
+
     if (gl.axisCharts) {
       // for line / area / scatter / column
       this.setDimensionsForAxisCharts()
@@ -261,10 +270,20 @@ export default class Dimensions {
 
   conditionalChecksForAxisCoords(xaxisLabelCoords, xtitleCoords) {
     const w = this.w
+
+    const baseXAxisHeight = xaxisLabelCoords.height + xtitleCoords.height
+    const xAxisHeightMultiplicate = w.globals.isMultiLineX
+      ? 1.2
+      : w.globals.LINE_HEIGHT_RATIO
+    const rotatedXAxisOffset = w.globals.rotateXLabels ? 22 : 10
+    const rotatedXAxisLegendOffset =
+      w.globals.rotateXLabels && w.config.legend.position === 'bottom'
+    const additionalOffset = rotatedXAxisLegendOffset ? 10 : 0
+
     this.xAxisHeight =
-      (xaxisLabelCoords.height + xtitleCoords.height) *
-        (w.globals.isMultiLineX ? 1.2 : w.globals.LINE_HEIGHT_RATIO) +
-      (w.globals.rotateXLabels ? 22 : 10)
+      baseXAxisHeight * xAxisHeightMultiplicate +
+      rotatedXAxisOffset +
+      additionalOffset
 
     this.xAxisWidth = xaxisLabelCoords.width
 
